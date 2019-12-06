@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>TO DO LIST</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<form >
+  <ion-list>
+    <ion-list-header>
+      Add Item To The List
+    </ion-list-header>
+    <ion-item>
+      <ion-input name="taskName" placeholder="Enter name of task" type="text" ></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+          <ion-input name="taskDes" placeholder="Enter Description" type="text" ></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+          <ion-input name="taskPririty" placeholder="Enter priority" type="text" ></ion-input>
+        </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+          <ion-input name="taskDate" placeholder="Enter Date" type="text" ></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button expand="full" color="tertiary"  >Add Task</ion-button>
+  
+      
+  </ion-list>
+</form>
+
 
 </ion-content>
