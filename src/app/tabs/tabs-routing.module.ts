@@ -38,6 +38,36 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'home',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../home/home.module').then(m => m.HomePageModule)
+          }
+        ]
+      },
+      {
+        path: 'tasklist',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tasklist/tasklist.module').then(m => m.TasklistPageModule)
+          }
+        ]
+      },
+      {
+        path: 'history',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../history/history.module').then(m => m.HistoryPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
