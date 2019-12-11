@@ -17,16 +17,16 @@ export class HistoryPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.historySub = this.dataService.list$.subscribe((taskData) => {
-    //   this.history = taskData.filter( (task) =>{
-    //     if(task.status == true){
-    //       return task;
-    //     }
-    //   })
-    // });
+    this.historySub = this.dataService.list$.subscribe((taskData) => {
+      this.history = taskData.filter( (task) =>{
+        if(task.status == true){
+          return task;
+        }
+      })
+    });
   }
   delete(task){
-    // this.dataService.deleteFromList(task);
+    this.dataService.deleteFromList(task);
   
   }
 }
