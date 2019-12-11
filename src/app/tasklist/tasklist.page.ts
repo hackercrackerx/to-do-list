@@ -17,20 +17,20 @@ export class TasklistPage implements OnInit {
 
   ngOnInit() {
 
-    // this.tasklistSub = this.dataService.list$.subscribe((taskData) => {
-    //   this.tasklist = taskData.filter( (task) =>{
-    //     if(task.status == false){
-    //       return task;
-    //     }
-    //   })
-    // });
+    this.tasklistSub = this.dataService.list$.subscribe((taskData) => {
+      this.tasklist = taskData.filter( (task) =>{
+        if(task.status == false){
+          return task;
+        }
+      })
+    });
   }
 delete(task){
-    // this.dataService.deleteFromList(task);
+    this.dataService.deleteFromList(task);
   
     }
     changeStatus( addedTime ) {
-      // this.dataService.changeStatus( addedTime );
+       this.dataService.changeStatus( addedTime );
     }
 
   }
