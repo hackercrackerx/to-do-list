@@ -31,12 +31,12 @@ export class TaskInfoService {
   }
   deleteFromList( id: number){
     
-    // this.taskList.forEach((task:Task, index)=>{
-    //   if(task.addedTime == id){
-    //     this.taskList.splice(index,1);
-    //   }
-    //   this.list$.next( this.taskList );
-    // });
+    this.taskList.forEach((task:Task, index)=>{
+      if(task.addedTime == id){
+        this.taskList.splice(index,1);
+      }
+      this.list$.next( this.taskList );
+    });
 
   }
 
@@ -68,15 +68,15 @@ export class TaskInfoService {
   }
 
  changeStatus(addedTime){
-  //  this.taskList.forEach(
-  //    (task) => {
-  //      if( task.addedTime == addedTime ) {
-  //        task.status = true;
-  //      }
-  //    }
-  //  );
-  //  this.saveData();
-  //  this.list$.next( this.taskList);
+   this.taskList.forEach(
+     (task) => {
+       if( task.addedTime == addedTime ) {
+         task.status = true;
+       }
+     }
+   );
+   this.saveData();
+   this.list$.next( this.taskList);
 
  } 
 
